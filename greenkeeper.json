@@ -1,0 +1,11 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "@narative/gatsby-theme-novela/package.json",
+        "package.json",
+        "www/package.json"
+      ]
+    }
+  }
+}
