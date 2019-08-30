@@ -6,6 +6,8 @@
 
 # Novela — A Gatsby theme by Narative
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/narative/gatsby-theme-novela.svg)](https://greenkeeper.io/)
+
 With minimal styling and maximum features — including multiple homepage layouts, built-in social sharing and dark mode — Novela makes it easy to start publishing beautiful articles and stories with Gatsby.
 
 Novela is built by the team at [Narative](https://www.narative.co), and built for everyone that loves the web.
