@@ -1,23 +1,24 @@
-import React, { useRef, useState, useEffect } from "react";
-import styled from "@emotion/styled";
-import throttle from "lodash/throttle";
-import { graphql, useStaticQuery } from "gatsby";
+import React, { useRef, useState, useEffect } from 'react';
+import styled from '@emotion/styled';
+import throttle from 'lodash/throttle';
+import { graphql, useStaticQuery } from 'gatsby';
+import ResizeObserver from 'resize-observer-polyfill';
 
-import Layout from "@components/Layout";
-import MDXRenderer from "@components/MDX";
-import Progress from "@components/Progress";
-import Section from "@components/Section";
-import Subscription from "@components/Subscription";
+import Layout from '@components/Layout';
+import MDXRenderer from '@components/MDX';
+import Progress from '@components/Progress';
+import Section from '@components/Section';
+import Subscription from '@components/Subscription';
 
-import mediaqueries from "@styles/media";
-import { debounce } from "@utils";
+import mediaqueries from '@styles/media';
+import { debounce } from '@utils';
 
-import ArticleAside from "../sections/article/Article.Aside";
-import ArticleHero from "../sections/article/Article.Hero";
-import ArticleControls from "../sections/article/Article.Controls";
-import ArticlesNext from "../sections/article/Article.Next";
-import ArticleSEO from "../sections/article/Article.SEO";
-import ArticleShare from "../sections/article/Article.Share";
+import ArticleAside from '../sections/article/Article.Aside';
+import ArticleHero from '../sections/article/Article.Hero';
+import ArticleControls from '../sections/article/Article.Controls';
+import ArticlesNext from '../sections/article/Article.Next';
+import ArticleSEO from '../sections/article/Article.SEO';
+import ArticleShare from '../sections/article/Article.Share';
 
 const siteQuery = graphql`
   {
@@ -43,40 +44,57 @@ function Article({ pageContext, location }) {
   const name = results.allSite.edges[0].node.siteMetadata.name;
 
   const { article, authors, mailchimp, next } = pageContext;
-
   useEffect(() => {
-    const calculateBodySize = throttle(() => {
-      const contentSection = contentSectionRef.current;
-
-      if (!contentSection) return;
-
-      /**
-       * If we haven't checked the content's height before,
-       * we want to add listeners to the content area's
-       * imagery to recheck when it's loaded
-       */
-      if (!hasCalculated) {
-        const debouncedCalculation = debounce(calculateBodySize);
-        const $imgs = contentSection.querySelectorAll("img");
-
-        $imgs.forEach($img => {
-          // If the image hasn't finished loading then add a listener
-          if (!$img.complete) $img.onload = debouncedCalculation;
-        });
-
-        // Prevent rerun of the listener attachment
-        setHasCalculated(true);
+    const resizeObserver = new ResizeObserver(entries => {
+      if (!Array.isArray(entries)) {
+        return;
       }
-
-      // Set the height and offset of the content area
-      setContentHeight(contentSection.getBoundingClientRect().height);
-    }, 20);
-
-    calculateBodySize();
-    window.addEventListener("resize", calculateBodySize);
-
-    return () => window.removeEventListener("resize", calculateBodySize);
+      // Since we only observe the one element, we don't need to loop over the array
+      if (!entries.length) {
+        return;
+      }
+      const entry = entries[0];
+      setContentHeight(entry.contentRect.height);
+      console.log(entry.contentRect.height);
+    });
+    resizeObserver.observe(contentSectionRef.current);
+    return () => resizeObserver.unobserve(contentSectionRef.current);
   }, []);
+
+  // useEffect(() => {
+  //   const calculateBodySize = throttle(() => {
+  //     const contentSection = contentSectionRef.current;
+
+  //     if (!contentSection) return;
+
+  //     /**
+  //      * If we haven't checked the content's height before,
+  //      * we want to add listeners to the content area's
+  //      * imagery to recheck when it's loaded
+  //      */
+  //     if (!hasCalculated) {
+  //       const debouncedCalculation = debounce(calculateBodySize);
+  //       const $imgs = contentSection.querySelectorAll('img');
+
+  //       $imgs.forEach($img => {
+  //         // If the image hasn't finished loading then add a listener
+  //         if (!$img.complete) $img.onload = debouncedCalculation;
+  //       });
+
+  //       // Prevent rerun of the listener attachment
+  //       setHasCalculated(true);
+  //     }
+
+  //     // Set the height and offset of the content area
+  //     console.log(contentSection.getBoundingClientRect().height, '2');
+  //     setContentHeight(contentSection.getBoundingClientRect().height);
+  //   }, 20);
+
+  //   calculateBodySize();
+  //   window.addEventListener('resize', calculateBodySize);
+
+  //   return () => window.removeEventListener('resize', calculateBodySize);
+  // }, []);
 
   return (
     <Layout>
@@ -127,7 +145,7 @@ const ArticleBody = styled.article`
   ${mediaqueries.desktop`
     padding-left: 53px;
   `}
-  
+
   ${mediaqueries.tablet`
     padding: 70px 0 80px;
   `}
