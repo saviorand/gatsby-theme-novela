@@ -55,7 +55,6 @@ function Article({ pageContext, location }) {
       }
       const entry = entries[0];
       setContentHeight(entry.contentRect.height);
-      console.log(entry.contentRect.height);
     });
     resizeObserver.observe(contentSectionRef.current);
     return () => resizeObserver.unobserve(contentSectionRef.current);
