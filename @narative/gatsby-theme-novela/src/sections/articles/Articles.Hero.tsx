@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
+import { Link } from "gatsby";
 
 import Section from '@components/Section';
 import Bio from '@components/Bio';
@@ -72,6 +73,28 @@ function ArticlesHero({ authors }: IAuthor) {
           </GridButton>
         </GridControlsContainer>
       </SubheadingContainer>
+      <CategoryButtonsContainer>
+      <ArticleLink to={'/category/economy'} data-a11y="false">
+      <CategoryButton>
+       Экономика
+      </CategoryButton>
+      </ArticleLink>
+      <ArticleLink to={'/category/science'} data-a11y="false">
+      <CategoryButton>
+       Наука
+      </CategoryButton>
+      </ArticleLink>
+      <ArticleLink to={'/category/gatsby'} data-a11y="false">
+      <CategoryButton>
+       Культура
+      </CategoryButton>
+      </ArticleLink>
+      <ArticleLink to={'/category/gatsby'} data-a11y="false">
+      <CategoryButton>
+       История
+      </CategoryButton>
+      </ArticleLink>
+      </CategoryButtonsContainer>
     </Section>
   );
 }
@@ -82,7 +105,7 @@ const SubheadingContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 
   ${mediaqueries.desktop`
     margin-bottom: 80px;
@@ -97,6 +120,22 @@ const SubheadingContainer = styled.div`
   `};
 `;
 
+const CategoryButtonsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 50px;
+
+  ${mediaqueries.desktop`
+    margin-bottom: 80px;
+  `};
+
+  ${mediaqueries.tablet`
+    margin-bottom: 60px;
+  `};
+
+`;
+
 const GridControlsContainer = styled.div`
   display: flex;
   align-items: center;
@@ -107,7 +146,7 @@ const GridControlsContainer = styled.div`
 `;
 
 const HeadingContainer = styled.div`
-  margin: 100px 0;
+  margin: 60px 0;
 
   ${mediaqueries.desktop`
     width: 80%;
@@ -178,3 +217,54 @@ const GridButton = styled.button<{ active: boolean }>`
     }
   }
 `;
+
+const CategoryButton = styled.button<{ active: boolean }>`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  width: 86px;
+  padding: 10px;
+  border-radius: 20%;
+  background: transparent;
+  color: ${p => p.theme.colors.primary};
+  transition: background 0.25s;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &:hover {
+    background: ${p => p.theme.colors.hover};
+  }
+
+  &[data-a11y='true']:focus::after {
+    content: '';
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    width: 120%;
+    height: 120%;
+    border: 2px solid ${p => p.theme.colors.accent};
+    background: rgba(255, 255, 255, 0.01);
+    border-radius: 20%;
+  }
+
+  svg {
+    opacity: ${p => (p.active ? 1 : 0.25)};
+    transition: opacity 0.2s;
+
+    path {
+      fill: ${p => p.theme.colors.primary};
+    }
+  }
+`;
+const ArticleLink = styled(Link)`
+  color: ${p => p.theme.colors.primary};
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+  `;
