@@ -74,7 +74,7 @@ function ArticlesHero({ authors }: IAuthor) {
         </GridControlsContainer>
       </SubheadingContainer>
       <CategoryButtonsContainer>
-      <ArticleLink to={'/category/economy'} data-a11y="false">
+      <ArticleLink to={'/category/economics'} data-a11y="false">
       <CategoryButton>
        Экономика
       </CategoryButton>
@@ -84,14 +84,14 @@ function ArticlesHero({ authors }: IAuthor) {
        Наука
       </CategoryButton>
       </ArticleLink>
-      <ArticleLink to={'/category/gatsby'} data-a11y="false">
+      <ArticleLink to={'/category/culture'} data-a11y="false">
       <CategoryButton>
        Культура
       </CategoryButton>
       </ArticleLink>
-      <ArticleLink to={'/category/gatsby'} data-a11y="false">
+      <ArticleLink to={'/category/musings'} data-a11y="false">
       <CategoryButton>
-       История
+       Размышления
       </CategoryButton>
       </ArticleLink>
       </CategoryButtonsContainer>
@@ -224,7 +224,6 @@ const CategoryButton = styled.button<{ active: boolean }>`
   align-items: center;
   justify-content: center;
   height: 46px;
-  width: 86px;
   padding: 10px;
   border-radius: 20%;
   background: transparent;

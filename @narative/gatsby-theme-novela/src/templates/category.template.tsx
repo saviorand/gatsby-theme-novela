@@ -14,15 +14,17 @@ function CategoryPage({ location, pageContext }) {
 
   return (
     <Layout>
-      <SEO pathname={location.pathname} title={(category == 'economy') ? 'Экономика' 
+      <SEO pathname={location.pathname} title={(category == 'economics') ? 'Экономика' 
       : (category == 'science') ? 'Наука'
       : (category == 'culture') ? 'Культура'
+      : (category == 'musings') ? 'Размышления'
       : (category == 'history') ? 'История'
       : 'Статьи'} />
       <Section narrow>
-        <CategoryHero category={(category == 'economy') ? 'Экономика' 
+        <CategoryHero category={(category == 'economics') ? 'Экономика' 
       : (category == 'science') ? 'Наука'
       : (category == 'culture') ? 'Культура'
+      : (category == 'musings') ? 'Размышления'
       : (category == 'history') ? 'История'
       : 'Статьи'} />
         <AuthorArticles articles={articles} />

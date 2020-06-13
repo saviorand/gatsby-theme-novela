@@ -1,9 +1,8 @@
-- name: Dennis Brotzky
+- name: Valentin Erokhin
   bio: |
     Written by You. This is where your author bio lives. Share your work, your
     joys and of course, your Twitter handle.
-  avatar: ./avatars/dennis-brotzky.jpg
-  featured: true
+  avatar: ./avatars/cvPhoto.png
   social:
     - url: https://unsplash.com
     - url: https://github.com
@@ -11,11 +10,11 @@
     - url: https://github.com
     - url: https://github.com
 
-- name: Thiago Costa
+- name: Reb Yesod
   bio: |
     Written by You. This is where your author bio lives. Share your work, your
     joys and of course, your Twitter handle.
-  avatar: ./avatars/thiago-costa.jpg
+  avatar: ./avatars/reb-yesod.jpg
   social:
     - url: https://github.com
     - url: https://github.com
@@ -23,11 +22,12 @@
     - url: https://github.com
     - url: https://github.com
 
-- name: Brad Tiller
+- name: Andrey Varfolomeev
   bio: |
     Written by You. This is where your author bio lives. Share your work, your
     joys and of course, your Twitter handle.
-  avatar: ./avatars/brad-tiller.jpg
+  avatar: ./avatars/andrey-varfolomeev.jpg
+  featured: true
   social:
     - url: https://github.com
     - url: https://github.com
@@ -35,11 +35,47 @@
     - url: https://github.com
     - url: https://github.com
 
-- name: Mack Mansouri
+- name: Eshu Marabo
   bio: |
     Written by You. This is where your author bio lives. Share your work, your
     joys and of course, your Twitter handle.
-  avatar: ./avatars/mack-mansouri.jpg
+  avatar: ./avatars/eshu-marabo.jpg
+  social:
+    - url: https://github.com
+    - url: https://github.com
+    - url: https://github.com
+    - url: https://github.com
+    - url: https://github.com
+
+- name: Petr Kromskih
+  bio: |
+    Written by You. This is where your author bio lives. Share your work, your
+    joys and of course, your Twitter handle.
+  avatar: ./avatars/petr-kr.jpg
+  social:
+    - url: https://github.com
+    - url: https://github.com
+    - url: https://github.com
+    - url: https://github.com
+    - url: https://github.com
+
+- name: Netovetz Netovetz
+  bio: |
+    Written by You. This is where your author bio lives. Share your work, your
+    joys and of course, your Twitter handle.
+  avatar: ./avatars/netovetz.jpg
+  social:
+    - url: https://github.com
+    - url: https://github.com
+    - url: https://github.com
+    - url: https://github.com
+    - url: https://github.com
+
+- name: Alexey Flaviy
+  bio: |
+    Written by You. This is where your author bio lives. Share your work, your
+    joys and of course, your Twitter handle.
+  avatar: ./avatars/flaviy.jpg
   social:
     - url: https://github.com
     - url: https://github.com
