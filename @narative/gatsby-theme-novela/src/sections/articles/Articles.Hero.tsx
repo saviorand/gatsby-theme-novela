@@ -123,6 +123,7 @@ const SubheadingContainer = styled.div`
 const CategoryButtonsContainer = styled.div`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 50px;
 
@@ -226,6 +227,7 @@ const CategoryButton = styled.button<{ active: boolean }>`
   height: 46px;
   padding: 10px;
   border-radius: 20%;
+  margin-top: 10px;
   background: transparent;
   color: ${p => p.theme.colors.primary};
   transition: background 0.25s;
