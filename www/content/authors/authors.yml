@@ -1,7 +1,6 @@
 - name: Valentin Erokhin
   bio: |
-    Written by You. This is where your author bio lives. Share your work, your
-    joys and of course, your Twitter handle.
+    --
   avatar: ./avatars/cvPhoto.png
   social:
     - url: https://unsplash.com
@@ -12,8 +11,7 @@
 
 - name: Reb Yesod
   bio: |
-    Written by You. This is where your author bio lives. Share your work, your
-    joys and of course, your Twitter handle.
+    --
   avatar: ./avatars/reb-yesod.jpg
   social:
     - url: https://github.com
@@ -24,8 +22,7 @@
 
 - name: Andrey Varfolomeev
   bio: |
-    Written by You. This is where your author bio lives. Share your work, your
-    joys and of course, your Twitter handle.
+    --
   avatar: ./avatars/andrey-varfolomeev.jpg
   featured: true
   social:
@@ -37,8 +34,7 @@
 
 - name: Eshu Marabo
   bio: |
-    Written by You. This is where your author bio lives. Share your work, your
-    joys and of course, your Twitter handle.
+    --
   avatar: ./avatars/eshu-marabo.jpg
   social:
     - url: https://github.com
@@ -49,8 +45,7 @@
 
 - name: Petr Kromskih
   bio: |
-    Written by You. This is where your author bio lives. Share your work, your
-    joys and of course, your Twitter handle.
+    --
   avatar: ./avatars/petr-kr.jpg
   social:
     - url: https://github.com
@@ -61,8 +56,7 @@
 
 - name: Netovetz Netovetz
   bio: |
-    Written by You. This is where your author bio lives. Share your work, your
-    joys and of course, your Twitter handle.
+    --
   avatar: ./avatars/netovetz.jpg
   social:
     - url: https://github.com
@@ -73,8 +67,7 @@
 
 - name: Alexey Flaviy
   bio: |
-    Written by You. This is where your author bio lives. Share your work, your
-    joys and of course, your Twitter handle.
+    --
   avatar: ./avatars/flaviy.jpg
   social:
     - url: https://github.com
