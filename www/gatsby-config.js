@@ -49,6 +49,12 @@ const plugins = [
       icon: `src/assets/favicon.png`,
     },
   },
+  {
+    resolve: `gatsby-plugin-google-analytics`,
+    options: {
+      trackingId: "UA-124321333-4",
+    },
+  },
 ];
 
 /**
