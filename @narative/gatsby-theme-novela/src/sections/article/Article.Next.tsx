@@ -9,6 +9,7 @@ import Image from "@components/Image";
 import mediaqueries from "@styles/media";
 
 import { IArticle } from "@types";
+import renderTime from  "../../utils/renderTime";
 
 /**
  * Sits at the bottom of our Article page. Shows the next 2 on desktop and the
@@ -62,7 +63,7 @@ const GridItem = ({
         </Title>
         <Excerpt hasOverflow={hasOverflow}>{article.excerpt}</Excerpt>
         <MetaData>
-          {article.date} · {article.timeToRead} min read
+          {article.date} · займёт {renderTime(article.timeToRead)}
         </MetaData>{" "}
       </Item>
     </ArticleLink>

@@ -9,6 +9,7 @@ import { IArticle, IAuthor } from '@types';
 
 import ArticleAuthors from './Article.Authors';
 import ArticleCategories from './Article.Categories';
+import renderTime from  "../../utils/renderTime";
 
 interface ArticleHeroProps {
   article: IArticle;
@@ -29,7 +30,7 @@ const ArticleHero = ({ article, authors, categories }: ArticleHeroProps) => {
           <ArticleAuthors authors={authors} />
           <ArticleCategories categories={categories} />
           <ArticleMeta hasCoAUthors={hasCoAUthors}>
-            {article.date} · {article.timeToRead} min read
+            {article.date} · займёт {renderTime(article.timeToRead)}
           </ArticleMeta>
         </HeroSubtitle>
       </Header>

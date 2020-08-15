@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { Link } from "gatsby";
 
 import Section from '@components/Section';
-import Bio from '@components/Bio';
+import DonateBox from '@components/DonateBox';
 import Icons from '@icons';
 import mediaqueries from '@styles/media';
 import { IAuthor } from '@types';
@@ -50,8 +50,9 @@ function ArticlesHero({ authors }: IAuthor) {
       <HeadingContainer style={{ maxWidth: `${hero.maxWidth}px` }}>
         <HeroHeading dangerouslySetInnerHTML={{ __html: hero.heading }} />
       </HeadingContainer>
+      <DonateBox/>
+
       <SubheadingContainer>
-        <Bio author={featuredAuthor} />
         <GridControlsContainer>
           <GridButton
             onClick={() => setGridLayout('tiles')}

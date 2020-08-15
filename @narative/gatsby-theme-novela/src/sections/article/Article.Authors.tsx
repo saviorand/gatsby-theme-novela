@@ -9,6 +9,9 @@ import Icons from "@icons";
 import mediaqueries from "@styles/media";
 import { IAuthor } from "@types";
 
+import renderName from  "../../utils/renderName";
+
+
 /**
  * Novela supports multiple authors and therefore we need to ensure
  * we render the right UI when there are varying amount of authors.
@@ -28,7 +31,7 @@ function ArticleAuthors({ authors }: { authors: IAuthor[] }) {
         <AuthorAvatar>
           <Image src={authors[0].avatar.small} />
         </AuthorAvatar>
-        <strong>{authors[0].name}</strong>
+        <strong>{renderName(authors[0].name)}</strong>
         <HideOnMobile>,&nbsp;</HideOnMobile>
       </AuthorLink>
     );

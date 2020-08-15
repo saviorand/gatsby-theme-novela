@@ -8,6 +8,8 @@ import { IAuthor } from "@types";
 
 import SocialLinks from "@components/SocialLinks";
 
+import renderName from  "../../utils/renderName";
+
 interface AuthorHeroProps {
   author: IAuthor;
 }
@@ -18,7 +20,7 @@ const AuthorHero = ({ author }: AuthorHeroProps) => {
       <HeroImage>
         <Image src={author.avatar.large} />
       </HeroImage>
-      <Heading>{author.name}</Heading>
+      <Heading>{renderName(author.name)}</Heading>
       <Subheading>{author.bio}</Subheading>
       <Social>
         <SocialLinks links={author.social} />

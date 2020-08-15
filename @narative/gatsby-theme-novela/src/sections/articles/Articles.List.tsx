@@ -10,6 +10,7 @@ import mediaqueries from "@styles/media";
 import { IArticle } from "@types";
 
 import { GridLayoutContext } from "./Articles.List.Context";
+import renderTime from  "../../utils/renderTime";
 
 /**
  * Tiles
@@ -111,7 +112,7 @@ const ListItem = ({ article, narrow }: ArticlesListItemProps) => {
             {article.excerpt}
           </Excerpt>
           <MetaData>
-            {article.date} · {article.timeToRead} min read
+            {article.date} · займёт {renderTime(article.timeToRead)}
           </MetaData>
         </div>
       </Item>

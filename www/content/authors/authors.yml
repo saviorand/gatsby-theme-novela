@@ -1,17 +1,14 @@
 - name: Valentin Erokhin
   bio: |
-    --
+    Valentine
   avatar: ./avatars/cvPhoto.png
   social:
-    - url: https://unsplash.com
-    - url: https://github.com
-    - url: https://github.com
-    - url: https://github.com
-    - url: https://github.com
+    - url: https://twitter.com/ValentineErokh1
+    - url: https://www.facebook.com/valentine.erokhin
 
 - name: Reb Yesod
   bio: |
-    --
+    Reb
   avatar: ./avatars/reb-yesod.jpg
   social:
     - url: https://github.com
@@ -22,19 +19,18 @@
 
 - name: Andrey Varfolomeev
   bio: |
-    --
+    Andrey
   avatar: ./avatars/andrey-varfolomeev.jpg
   featured: true
   social:
-    - url: https://github.com
-    - url: https://github.com
-    - url: https://github.com
-    - url: https://github.com
-    - url: https://github.com
+    - url: https://twitter.com
+    - url: https://facebook.com
+    - url: https://linkedin.com
+    - url: https://instagram.com
 
 - name: Eshu Marabo
   bio: |
-    --
+    Eshu
   avatar: ./avatars/eshu-marabo.jpg
   social:
     - url: https://github.com
@@ -45,7 +41,7 @@
 
 - name: Petr Kromskih
   bio: |
-    --
+    Petr
   avatar: ./avatars/petr-kr.jpg
   social:
     - url: https://github.com
@@ -56,7 +52,7 @@
 
 - name: Netovetz Netovetz
   bio: |
-    --
+    Netovetz
   avatar: ./avatars/netovetz.jpg
   social:
     - url: https://github.com
@@ -67,7 +63,7 @@
 
 - name: Alexey Flaviy
   bio: |
-    --
+    Alexey
   avatar: ./avatars/flaviy.jpg
   social:
     - url: https://github.com
