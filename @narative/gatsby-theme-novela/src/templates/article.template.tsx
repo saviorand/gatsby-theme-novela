@@ -8,6 +8,7 @@ import MDXRenderer from '@components/MDX';
 import Progress from '@components/Progress';
 import Section from '@components/Section';
 import Subscription from '@components/Subscription';
+import DonateBox from '../components/DonateBox/index'
 
 import mediaqueries from '@styles/media';
 import { debounce } from '@utils';
@@ -92,14 +93,16 @@ function Article({ pageContext, location }) {
       <MobileControls>
         <ArticleControls />
       </MobileControls>
-      <ArticleBody ref={contentSectionRef}>
+      <ArticleBody ref={contentSectionRef} >
         <MDXRenderer content={article.body}>
           <ArticleShare />
+
         </MDXRenderer>
       </ArticleBody>
       {mailchimp && article.subscription && <Subscription />}
       {next.length > 0 && (
         <NextArticle narrow>
+        <DonateBox/>
           <FooterNext>Также можно почитать вот это</FooterNext>
           <ArticlesNext articles={next} />
           <FooterSpacer />
@@ -121,6 +124,7 @@ const MobileControls = styled.div`
     display: none;
   `}
 `;
+
 
 const ArticleBody = styled.article`
   position: relative;
