@@ -5,8 +5,8 @@ function Logo(props) {
   <svg
       id="prefix__\u0421\u043B\u043E\u0439_1"
       data-name="\u0421\u043B\u043E\u0439 1"
-      width={300}
-      height={300}
+      width={120}
+      height={120}
       viewBox="0 0 300 300"
       {...props}
     >
