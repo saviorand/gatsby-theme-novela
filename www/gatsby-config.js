@@ -1,12 +1,12 @@
 require("dotenv").config();
 
 const siteMetadata = {
-  title: `Русский Футуризм`,
-  name: `Русский Футуризм`,
+  title: `Русский Футурист`,
+  name: `Русский Футурист`,
   siteUrl: `https://rufuture.com`,
-  description: `Русский футуризм — это когда будущее есть.`,
+  description: `Русский футурист — это когда будущее есть.`,
   hero: {
-    heading: `Русский футуризм — это когда будущее есть.`,
+    heading: `Русский футурист — это когда будущее есть.`,
     maxWidth: 652,
   },
   social: [
@@ -40,8 +40,8 @@ const plugins = [
   {
     resolve: `gatsby-plugin-manifest`,
     options: {
-      name: `Русский Футуризм`,
-      short_name: `Футуризм`,
+      name: `Русский Футурист`,
+      short_name: `Футурист`,
       start_url: `/`,
       background_color: `#fff`,
       theme_color: `#fff`,
