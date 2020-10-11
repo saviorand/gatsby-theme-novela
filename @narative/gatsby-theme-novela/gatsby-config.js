@@ -200,7 +200,6 @@ module.exports = ({
               withWebp: true,
             },
           },
-          { resolve: 'gatsby-remark-social-cards'},
           { resolve: `gatsby-remark-copy-linked-files` },
           { resolve: `gatsby-remark-numbered-footnotes` },
           { resolve: `gatsby-remark-smartypants` },
