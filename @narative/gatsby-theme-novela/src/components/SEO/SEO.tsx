@@ -140,7 +140,7 @@ function SEO({
   return (
     <Helmet
       title={title || site.title}
-      htmlAttributes={{ lang: 'en' }}
+      htmlAttributes={{ lang: 'ru' }}
       script={themeUIDarkModeWorkaroundScript}
       meta={metaTags}
     >
