@@ -93,7 +93,7 @@ function Article({ pageContext, location }) {
         article={article}
         authors={authors}
         categories={categories}
-        cover={siteQuery.fileName.childImageSharp.fluid}
+        cover={results.fileName.childImageSharp.fluid}
       />
       <ArticleAside contentHeight={contentHeight}>
         <Progress contentHeight={contentHeight} />
