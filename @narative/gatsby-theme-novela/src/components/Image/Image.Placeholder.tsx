@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import Image from "@components/Image";
-
+import { graphql } from "gatsby"
 import mediaqueries from "@styles/media";
 
 const Container = styled.div`
@@ -20,7 +20,7 @@ const Container = styled.div`
   `}
 `;
 
-function ImagePlaceholder(props) {
+function ImagePlaceholder(props, data) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
@@ -36,9 +36,21 @@ function ImagePlaceholder(props) {
 
   return (
     <Container ref={containerRef} {...props}>
-      <Image src={'./preview.jpg'} />
+      <Image src={data.fileName.childImageSharp.fluid} />
     </Container>
   );
 }
 
 export default ImagePlaceholder;
+
+export const query = graphql`
+  query {
+    fileName: file(relativePath: { eq: "/preview.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 430, maxHeight: 280) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
