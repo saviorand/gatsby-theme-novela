@@ -22,6 +22,7 @@ module.exports.local = {
         node {
           id
           slug
+          coverSlug
           secret
           title
           author

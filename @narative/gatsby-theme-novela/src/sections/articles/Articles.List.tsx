@@ -98,7 +98,7 @@ const ListItem = ({ article, narrow }: ArticlesListItemProps) => {
     <ArticleLink to={article.slug} data-a11y="false">
       <Item gridLayout={gridLayout}>
         <ImageContainer narrow={narrow} gridLayout={gridLayout}>
-          {hasHeroImage ? <Image src={imageSource} /> : <ImagePlaceholder />}
+          {hasHeroImage ? <Image src={imageSource} /> : <ImagePlaceholder coverSlug={article.coverSlug} />}
         </ImageContainer>
         <div>
           <Title dark hasOverflow={hasOverflow} gridLayout={gridLayout}>

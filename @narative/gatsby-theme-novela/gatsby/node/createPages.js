@@ -219,6 +219,7 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
         categories: article.categories,
         basePath,
         slug: article.slug,
+        coverSlug: article.coverSlug,
         id: article.id,
         title: article.title,
         mailchimp,
