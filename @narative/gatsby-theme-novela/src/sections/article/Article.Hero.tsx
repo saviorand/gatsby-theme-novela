@@ -16,6 +16,26 @@ interface ArticleHeroProps {
   authors: IAuthor[];
 }
 
+import { graphql, useStaticQuery } from "gatsby";
+
+const siteQuery = graphql`
+  {
+    allSite {
+      edges {
+        node {
+          siteMetadata {
+            name
+            siteUrl
+          }
+        }
+      }
+    }
+  }
+`;
+const results = useStaticQuery(siteQuery);
+const siteUrl = results.allSite.edges[0].node.siteMetadata.siteUrl;
+
+
 const ArticleHero = ({ article, authors, categories }: ArticleHeroProps) => {
   const hasCoAUthors = authors.length > 1;
   const hasHeroImage =
@@ -38,7 +58,7 @@ const ArticleHero = ({ article, authors, categories }: ArticleHeroProps) => {
         {hasHeroImage ? (
           <Image src={article.hero.full} />
         ) : (
-          <ImagePlaceholder title={article.title} />
+          <ImagePlaceholder title={`${siteUrl}${location.pathname}twitter-card.jpg`} />
         )}
       </HeroImage>
     </Hero>

@@ -31,6 +31,25 @@ interface ArticlesListProps {
   alwaysShowAllDetails?: boolean;
 }
 
+import { graphql, useStaticQuery } from "gatsby";
+
+const siteQuery = graphql`
+  {
+    allSite {
+      edges {
+        node {
+          siteMetadata {
+            name
+            siteUrl
+          }
+        }
+      }
+    }
+  }
+`;
+const results = useStaticQuery(siteQuery);
+const siteUrl = results.allSite.edges[0].node.siteMetadata.siteUrl;
+
 interface ArticlesListItemProps {
   article: IArticle;
   narrow?: boolean;
@@ -98,7 +117,7 @@ const ListItem = ({ article, narrow }: ArticlesListItemProps) => {
     <ArticleLink to={article.slug} data-a11y="false">
       <Item gridLayout={gridLayout}>
         <ImageContainer narrow={narrow} gridLayout={gridLayout}>
-          {hasHeroImage ? <Image src={imageSource} /> : <ImagePlaceholder />}
+          {hasHeroImage ? <Image src={imageSource} /> : <ImagePlaceholder title={`${siteUrl}${location.pathname}twitter-card.jpg`} />}
         </ImageContainer>
         <div>
           <Title dark hasOverflow={hasOverflow} gridLayout={gridLayout}>
