@@ -36,7 +36,7 @@ function ImagePlaceholder(props) {
   return (
     <Container ref={containerRef} {...props}>
       <div>
-        {dimensions.width} x {dimensions.height}
+        {props.title}
       </div>
     </Container>
   );
