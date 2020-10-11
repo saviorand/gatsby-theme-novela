@@ -14,7 +14,7 @@ const siteMetadata = {
       url: `https://www.youtube.com/channel/UCG5xBdtlUQzZeRh4EXEvk9A`,
     },
     {
-      url: `https://www.instagram.com/red_zion/`,
+      url: `https://t.me/rufuturism`,
     },
     {
       url: `https://www.patreon.com/redzion`,
