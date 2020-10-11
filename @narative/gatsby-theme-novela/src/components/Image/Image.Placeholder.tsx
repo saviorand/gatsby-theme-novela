@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import styled from "@emotion/styled";
+import Image from "@components/Image";
 
 import mediaqueries from "@styles/media";
 
@@ -35,9 +36,7 @@ function ImagePlaceholder(props) {
 
   return (
     <Container ref={containerRef} {...props}>
-      <div>
-        {props.title}
-      </div>
+      <Image src={'./preview.jpg'} />
     </Container>
   );
 }
