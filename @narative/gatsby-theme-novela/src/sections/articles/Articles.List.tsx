@@ -85,7 +85,7 @@ function ArticlesList({ articles, alwaysShowAllDetails }: ArticlesListProps) {
 
 export default ArticlesList;
 
-const ListItem = ({ article, narrow }: ArticlesListItemProps) => {
+const ListItem = ({ cover, article, narrow }) => {
   if (!article) return null;
 
   const { gridLayout } = useContext(GridLayoutContext);
@@ -98,7 +98,7 @@ const ListItem = ({ article, narrow }: ArticlesListItemProps) => {
     <ArticleLink to={article.slug} data-a11y="false">
       <Item gridLayout={gridLayout}>
         <ImageContainer narrow={narrow} gridLayout={gridLayout}>
-          {hasHeroImage ? <Image src={imageSource} /> : <ImagePlaceholder />}
+          {hasHeroImage ? <Image src={imageSource} /> : <Image src={cover} />}
         </ImageContainer>
         <div>
           <Title dark hasOverflow={hasOverflow} gridLayout={gridLayout}>

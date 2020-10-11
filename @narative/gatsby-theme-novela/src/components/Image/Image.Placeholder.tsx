@@ -36,21 +36,9 @@ function ImagePlaceholder(props, data) {
 
   return (
     <Container ref={containerRef} {...props}>
-      <Image src={data.fileName.childImageSharp.fluid} />
+      <Image src={props.img} />
     </Container>
   );
 }
 
 export default ImagePlaceholder;
-
-export const query = graphql`
-  query {
-    fileName: file(relativePath: { eq: "/preview.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 430, maxHeight: 280) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`

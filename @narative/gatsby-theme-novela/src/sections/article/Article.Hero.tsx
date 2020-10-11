@@ -16,7 +16,7 @@ interface ArticleHeroProps {
   authors: IAuthor[];
 }
 
-const ArticleHero = ({ article, authors, categories }: ArticleHeroProps) => {
+const ArticleHero = ({ cover, article, authors, categories }) => {
   const hasCoAUthors = authors.length > 1;
   const hasHeroImage =
     Object.keys(article.hero.full).length !== 0 &&
@@ -38,12 +38,13 @@ const ArticleHero = ({ article, authors, categories }: ArticleHeroProps) => {
         {hasHeroImage ? (
           <Image src={article.hero.full} />
         ) : (
-          <ImagePlaceholder title={article.title} />
+          <Image src={cover} />
         )}
       </HeroImage>
     </Hero>
   );
 };
+
 
 export default ArticleHero;
 
