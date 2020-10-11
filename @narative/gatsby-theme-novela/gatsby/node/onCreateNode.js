@@ -1,5 +1,5 @@
 /* eslint-disable no-prototype-builtins */
-const createImage = require('gatsby-plugin-blog-cover')
+
 const crypto = require(`crypto`);
 const slugify = require('slugify');
 
@@ -97,12 +97,6 @@ module.exports = ({ node, actions, getNode, createNodeId }, themeOptions) => {
           node.frontmatter.date,
         ),
       ),
-      coverSlug: createImage({
-        title: node.frontmatter.title,
-        imgPath: './src/images',
-        domain: "https://rufuture.com",
-        border: false,
-      }),
       title: node.frontmatter.title,
       subscription: node.frontmatter.subscription !== false,
       categories: node.frontmatter.categories || [],

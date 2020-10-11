@@ -51,7 +51,6 @@ export interface IArticle {
   };
   timeToRead: number;
   date: string;
-  coverSlug: string;
 }
 
 interface IArticleQuery {

@@ -12,7 +12,6 @@
     "@narative/gatsby-theme-novela": "^0.8.1",
     "dotenv": "^8.0.0",
     "gatsby": "^2.13.41",
-    "gatsby-plugin-blog-cover": "^1.0.1",
     "gatsby-plugin-google-analytics": "^2.1.6",
     "gatsby-plugin-mailchimp": "^5.1.2",
     "gatsby-plugin-manifest": "^2.2.4",

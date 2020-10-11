@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import styled from "@emotion/styled";
+
 import mediaqueries from "@styles/media";
 
 const Container = styled.div`
@@ -34,10 +35,9 @@ function ImagePlaceholder(props) {
 
   return (
     <Container ref={containerRef} {...props}>
-      <img src={require(`../../${props.coverSlug}`)} alt='Blog Cover' width='100%' />
-      {/*<div>
+      <div>
         {props.title}
-      </div>*/}
+      </div>
     </Container>
   );
 }

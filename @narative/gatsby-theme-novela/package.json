@@ -46,7 +46,6 @@
     "gatsby": "^2.15.7",
     "gatsby-image": "^2.2.7",
     "gatsby-paginate": "^1.1.0",
-    "gatsby-plugin-blog-cover": "^1.0.1",
     "gatsby-plugin-emotion": "^4.1.2",
     "gatsby-plugin-feed": "2.3.7",
     "gatsby-plugin-mailchimp": "^5.1.2",
