@@ -38,7 +38,7 @@ const ArticleHero = ({ cover, article, authors, categories }) => {
         {hasHeroImage ? (
           <Image src={article.hero.full} />
         ) : (
-          <Image src={cover} />
+          <ImagePlaceholder title={article.title} />
         )}
       </HeroImage>
     </Hero>

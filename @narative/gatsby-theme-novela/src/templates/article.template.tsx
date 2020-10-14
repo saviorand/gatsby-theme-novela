@@ -22,13 +22,6 @@ import ArticleShare from '../sections/article/Article.Share';
 
 const siteQuery = graphql`
   {
-    fileName: file(relativePath: { eq: "/preview.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 430, maxHeight: 280) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     allSite {
       edges {
         node {
@@ -93,7 +86,6 @@ function Article({ pageContext, location }) {
         article={article}
         authors={authors}
         categories={categories}
-        cover={results.fileName.childImageSharp.fluid}
       />
       <ArticleAside contentHeight={contentHeight}>
         <Progress contentHeight={contentHeight} />
